@@ -134,3 +134,5 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+require_once( __DIR__ . '/../thyme/setup.php' );
