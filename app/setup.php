@@ -135,4 +135,4 @@ add_action('widgets_init', function () {
     ] + $config);
 });
 
-require_once( __DIR__ . '/../thyme/setup.php' );
+require_once( __DIR__ . '/../libthyme/setup.php' );
