@@ -23,6 +23,10 @@ class FloatingIconsWalker extends Walker_Nav_Menu {
   }
 }
 
+register_nav_menus( [
+  'floating_icons' => __( 'Floating Icons', 'sage' ),
+] );
+
 add_action( 'wp_footer', function () {
   $locations = get_nav_menu_locations();
   if ( ! empty($locations['floating_icons']) ) {
