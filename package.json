@@ -18,9 +18,11 @@
     "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.11.6",
     "@roots/bud": "6.6.2",
-    "@roots/bud-tailwindcss": "6.6.2",
-    "@roots/sage": "6.6.2"
+    "@roots/bud-sass": "^6.6.5",
+    "@roots/sage": "6.6.2",
+    "bootstrap": "^5.2.3"
   },
   "dependencies": {}
 }
