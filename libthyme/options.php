@@ -47,7 +47,7 @@ function theme_write_sass () {
 		$final .= "$l\n";
 	}
 
-	$file = __DIR__ . '/../resources/assets/styles/common/_wp_theme.scss';
+	$file = __DIR__ . '/../resources/styles/common/_wp_theme.scss';
 
 	$orig = file_get_contents( $file );
 
@@ -64,8 +64,8 @@ function theme_write_sass () {
 function theme_compile_sass () {
 	$olddir = getcwd();
 	chdir( __DIR__ . '/..'  );
-	system( './yarn build' );
-	system( 'chmod -R g+rwX ./dist' );
+	system( 'yarn build' );
+	system( 'chmod -R g+rwX public' );
 	chdir( $olddir );
 }
 
