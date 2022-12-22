@@ -1,0 +1,51 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$primary:    $wp-theme-colour-primary;
+$secondary:  $wp-theme-colour-secondary;
+$tertiary:   $wp-theme-colour-tertiary;
+$quaternary: $wp-theme-colour-quaternary;
+$light:      $wp-theme-colour-light;
+$dark:       $wp-theme-colour-dark;
+$success:    $wp-theme-colour-success;
+$danger:     $wp-theme-colour-danger;
+$warning:    $wp-theme-colour-warning;
+$info:       $wp-theme-colour-info;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "tertiary":   $tertiary,
+  "quaternary": $quaternary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$body-bg:    $wp-theme-page-bg;
+$body-color: $wp-theme-page-text;
+$link-color: $wp-theme-page-link;
+$text-muted: $wp-theme-page-muted;
+$enable-gradients: true;
+$spacer: 1.2rem;
+
+$font-family-display:    $wp-theme-font-display;
+$font-family-sans-serif: $wp-theme-font-sans;
+$font-family-serif:      $wp-theme-font-serif;
+$font-family-monospace:  $wp-theme-font-monospace;
+$font-family-base:       $wp-theme-font-base;
+$headings-font-family:   $wp-theme-font-headings;
+
+/* Make things available as CSS vars */
+:root {
+  --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+  --font-family-serif: #{inspect($font-family-serif)};
+  --font-family-monospace: #{inspect($font-family-monospace)};
+  --font-family-display: #{inspect($font-family-display)};
+  --font-base: #{inspect($font-family-base)};
+  --font-headings: #{inspect($headings-font-family)};
+  --spacer: #{$spacer};
+}

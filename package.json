@@ -20,9 +20,14 @@
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
     "@roots/bud": "6.6.2",
+    "@roots/bud-postcss": "^6.6.5",
     "@roots/bud-sass": "^6.6.5",
     "@roots/sage": "6.6.2",
     "bootstrap": "^5.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hover": "^3.0.0-alpha.6",
+    "slick-carousel": "^1.8.1",
+    "tilt.js": "^1.2.1"
+  }
 }

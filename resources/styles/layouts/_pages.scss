@@ -1,0 +1,29 @@
+.content.row {
+  @extend .my-3;
+
+  a[name] { display: block; position: relative; top: -60px; left: -1px; height: 1px; width: 1px; background: transparent; }
+}
+
+.special-h1 {
+  @extend .pb-3;
+  text-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+}
+
+.page-header h1 {
+  @extend .special-h1, .text-center;
+  @include media-breakpoint-up(lg) {
+    font-size: 4rem;
+  }
+}
+
+.text-large {
+  font-size: 125%;
+  @include media-breakpoint-up(md) {
+    font-size: 150%;
+  }
+}
+
+::selection {
+  @extend .bg-primary, .text-white;
+}
+

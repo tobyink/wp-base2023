@@ -1,0 +1,23 @@
+.search-form {
+  @extend .row, .gx-0, .mb-3;
+  flex-wrap: nowrap;
+
+  label {
+    font-weight: normal;
+    width: 75%;
+  }
+
+  .search-field, input[type=search] {
+    @extend .form-control;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .search-submit, button {
+    @extend .btn;
+    @extend .btn-secondary;
+    width: 25%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

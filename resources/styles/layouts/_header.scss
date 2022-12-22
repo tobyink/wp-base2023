@@ -1,0 +1,55 @@
+.banner {
+  @extend .shadow-lg;
+
+  background: $wp-theme-header-bg !important;
+  color: $wp-theme-header-text !important;
+
+  a {
+    @extend .text-white;
+  }
+
+  button { border: 1px solid !important; }
+  button, a { color: $wp-theme-header-text !important; }
+  button:hover, a:hover, .current-menu-item a { color: $wp-theme-header-hover !important; }
+  button { border: 1px solid !important; }
+  button span { position: relative; top: 0.333rem }
+  
+  .container {
+    @extend .px-0;
+    .navbar {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  .dropdown-menu {
+    background: $wp-theme-header-dropdown-bg !important;
+    color: $wp-theme-header-dropdown-text !important;
+    button, a { color: $wp-theme-header-dropdown-text !important; }
+    .dropdown-item:hover {
+      button, a { color: lighten($wp-theme-header-dropdown-text, 10%) !important; }
+      color: lighten($wp-theme-header-dropdown-text, 10%) !important;
+      background: lighten($wp-theme-header-dropdown-bg, 10%) !important;
+    }
+  }
+
+  .nav li {
+    @extend .nav-item;
+  }
+
+  .nav a {
+    @extent .nav-link;
+  }
+}
+
+.fullwidth-banner .fullwidth {
+  width: 100%;
+  height: auto;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+div.breadcrumbs {
+  @extend .small, .py-3;
+}

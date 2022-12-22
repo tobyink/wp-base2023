@@ -1,0 +1,27 @@
+footer.content-info {
+  @extend .bg-dark, .text-white, .py-5;
+  a {
+    @extend .text-white;
+  }
+  section {
+    @extend .text-center;
+  }
+
+  .widget_nav_menu ul {
+    list-style: none;
+    margin: 1em 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      @include media-breakpoint-up(sm) {
+        padding: 0 0.5rem;
+        display: inline;
+      }
+    }
+  }
+}
+
+#cookie_kwan {
+  box-shadow: 0 0 20px rgba($dark, 0.33);
+}

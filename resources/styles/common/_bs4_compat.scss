@@ -1,0 +1,49 @@
+.form-group {
+  @extend .mb-3;
+  label {
+    @extend .form-label;
+  }
+}
+
+.badge-pill {
+  @extend .rounded-pill;
+}
+
+.rounded-sm {
+  @extend .rounded-1;
+}
+
+.rounded-lg {
+  @extend .rounded-3;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  color: $dark;
+  background-color: $light;
+  @include border-radius($border-radius-lg);
+
+  @include media-breakpoint-up(sm) {
+    padding: 4rem 2rem;
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+}
+
+.bg-gradient-primary     { @extend .bg-primary,    .bg-gradient; }
+.bg-gradient-secondary   { @extend .bg-secondary,  .bg-gradient; }
+.bg-gradient-tertiary    { @extend .bg-tertiary,   .bg-gradient; }
+.bg-gradient-quaternary  { @extend .bg-quaternary, .bg-gradient; }
+.bg-gradient-dark        { @extend .bg-dark,       .bg-gradient; }
+.bg-gradient-light       { @extend .bg-light,      .bg-gradient; }
+
+.navbar { background-image: none }
+
+.float-left  { @extend .float-start; }
+.float-right { @extend .float-end; }
+

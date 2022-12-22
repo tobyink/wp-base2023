@@ -40,6 +40,7 @@
   },
   "require": {
     "php": "^7.4|^8.0",
+    "mwdelaney/sage-bootstrap4-navwalker": "^1.7",
     "stoutlogic/acf-builder": "^1.12"
   },
   "require-dev": {

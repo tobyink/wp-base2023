@@ -1,0 +1,95 @@
+#floating-icons {
+
+  background: $wp-theme-floating-icons-bg;
+  border: 1px solid darken($wp-theme-floating-icons-bg, 10%);
+  color: $wp-theme-floating-icons-text;
+  a, a:link { color: $wp-theme-floating-icons-text }
+
+  padding: 0.5 * $spacer;
+
+  z-index: $zindex-fixed;
+  position: fixed;
+  bottom: 0;
+
+  transition:
+    left 0.5s,
+    right 0.5s,
+    bottom 0.5s,
+    top 0.5s;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin: 0 0.25 * $spacer;
+      padding: 0;
+    }
+    transition: height 1s;
+  }
+
+  &.floating-icons-left {
+    left: -0.75 * $spacer;
+    padding-left: $spacer;
+    border-top-right-radius: $border-radius-lg;
+  }
+
+  &.floating-icons-right {
+    right: -0.75 * $spacer;
+    padding-right: $spacer;
+    border-top-left-radius: $border-radius-lg;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding: 0 0.5 * $spacer;
+    span { padding-left: 0.5 * $spacer }
+  }
+
+  a {
+    @extend .rounded;
+    display: block;
+    padding: 0.5 * $spacer;
+    transition: background 0.5s;
+    &:hover {
+      background: $wp-theme-floating-icons-hover;
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.floating-icons-left:hover {
+      left: -0.5 * $spacer;
+    }
+    &.floating-icons-right:hover {
+      right: -0.5 * $spacer;
+    }
+    h2 { display: none }
+    a {
+      span { display: none }
+      height: 2.5 * $spacer;
+      width: 2.5 * $spacer;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    a {
+      span {
+        padding-left: 0.25 * $spacer;
+      }
+    }
+    &.floating-icons-js {
+      h2 { cursor: pointer; }
+    }
+    &.floating-icons-collapse {
+      padding-bottom: 0;
+      ul {
+        height: 0;
+        overflow: hidden;
+        transition: height 1s, overflow 1s;
+      }
+    }
+  }
+}

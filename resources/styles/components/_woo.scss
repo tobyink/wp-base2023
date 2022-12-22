@@ -1,0 +1,16 @@
+.woocommerce .form-row { display: block }
+
+#coupon_code {
+  @extend .form-control;
+  display: inline;
+  width: 12rem;
+}
+
+.woocommerce-MyAccount-navigation {
+  ul {
+    @extend .list-group, .border-primary;
+    li {
+      @extend .list-group-item;
+    }
+  }
+}

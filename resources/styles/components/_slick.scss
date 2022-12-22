@@ -1,0 +1,11 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+
+.slick-prev:before,
+.slick-next:before {
+  color: theme-color("tertiary");
+}
+
+.foogallery-gallery-slick img {
+  @extend .w-100;
+}

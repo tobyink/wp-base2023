@@ -1,0 +1,47 @@
+.business-card {
+  margin: $spacer auto $spacer !important;
+  padding: $spacer !important;
+  padding-bottom: 0 !important;
+
+  .col-md-3 { text-align: center }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 54rem;
+    margin: ($spacer * 12) auto $spacer !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    img {
+      max-width: 200px;
+      margin: auto auto ($spacer/2) !important;
+    }
+
+    h1 { text-align: center; }
+
+    h2 {
+      text-align: center;
+      font-size: 100%;
+    }
+    
+    p { margin: ($spacer/2) 0 !important; }
+  }
+
+  h1 { margin-bottom: ($spacer * 0.25) !important; }
+  h2 { margin-top: ($spacer * 0.25) !important; }
+  p { margin: $spacer 0 }
+  a { color: $body-color !important; }
+
+  .wrap-fa {
+    display:inline-block;
+    width:1.5em;
+    text-align:center;
+  }
+}

@@ -4,7 +4,7 @@
  * Initialize ACF Builder
  */
 add_action('init', function () {
-    collect(glob(config('theme.dir').'/thyme/fields/'.'*.php'))->map(function ($field) {
+    collect(glob(__DIR__.'/fields/'.'*.php' ))->map(function ($field) {
         return require_once($field);
     })->map(function ($field) {
         if ($field instanceof FieldsBuilder) {
@@ -17,11 +17,13 @@ add_action('init', function () {
  * Initialize Shortcodes
  */
 add_action('init', function () {
-    collect(glob(config('theme.dir').'/thyme/shortcodes/'.'*.php'))->map(function ($field) {
+    collect(glob(__DIR__.'/shortcodes/'.'*.php'))->map(function ($field) {
         return require_once($field);
     });
 });
 
+require_once( __DIR__ . '/filters.php' );
+require_once( __DIR__ . '/helpers.php' );
 require_once( __DIR__ . '/options.php' );
 require_once( __DIR__ . '/meta.php' );
 require_once( __DIR__ . '/acf-tweaks.php' );
