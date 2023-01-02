@@ -2,6 +2,9 @@
 
 namespace App;
 
+add_filter( 'rss_widget_feed_link', '__return_false' );
+add_filter( 'wp_feed_cache_transient_lifetime', function(){ return 900; });
+
 /**
  * Add <body> classes
  */

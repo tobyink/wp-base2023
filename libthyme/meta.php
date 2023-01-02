@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support( 'automatic-feed-links' );
+
 add_action( 'wp_head', function () {
 
 	$title = get_the_title();

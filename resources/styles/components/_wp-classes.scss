@@ -54,3 +54,17 @@
   @extend .visually-hidden;
   @extend .visually-hidden-focusable;
 }
+
+h3 a.rsswidget {
+  text-decoration: none;
+  color: inherit;
+}
+
+li a.rsswidget {
+  font-weight: bold;
+}
+
+span.rss-date {
+  @extend .text-muted;
+  @extend .small;
+}
