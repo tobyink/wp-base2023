@@ -18,6 +18,7 @@ If you need to customize this base, fork this repo (and maybe Thyme's repo too) 
 ```shell
 cd $HOME/sites/test.site.example
 git clone https://github.com/tobyink/wp-base2023.git .
+composer install
 cp wp-config.php.example wp-config.php
 $EDITOR wp-config.php
 ```
