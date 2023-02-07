@@ -1,0 +1,105 @@
+{
+	"require": {
+	        "johnpbloch/wordpress": ">=6.0",
+		"wpackagist-theme/twentytwentytwo": "^1.3",
+		"wpackagist-plugin/widget-logic": "*",
+		"wpackagist-plugin/classic-editor": "*",
+		"wpackagist-plugin/classic-widgets": "*",
+		"wpackagist-plugin/breadcrumb-navxt": "*",
+		"wpackagist-plugin/foogallery": "*",
+                "tobyink/foogallery-bootstrapped-gallery-template": "*",
+		"tobyink/foogallery-slick-gallery-template": "*",
+                "tobyink/tobyink-contact": "*",
+		"tobyink/ctrl-semicolon": "*",
+                "maarten-twelvetwenty/advanced-custom-fields-pro": "*",
+		"roots/acorn": "^2.1"
+	},
+	"extra": {
+	        "installer-paths": {
+	            "wp-content/plugins/{$name}/": [
+	                "type:wordpress-plugin"
+	            ],
+	            "wp-content/themes/{$name}/": [
+	                "type:wordpress-theme"
+	            ]
+	        },
+	        "wordpress-install-dir": "wordpress"
+	},
+	"repositories": [
+	        {
+	            "type": "composer",
+	            "url": "https://wpackagist.org"
+	        },
+                {
+                    "type": "package",
+                    "package": {
+                        "name": "tobyink/foogallery-bootstrapped-gallery-template",
+                        "version": "1.0.1",
+                        "type": "wordpress-plugin",
+                        "source": {
+                            "url": "git@github.com:tobyink/php-wp-foogallery-bootstrapped-gallery-template.git",
+                            "type": "git",
+                            "reference": "master"
+                        }
+                    }
+                },
+                {
+                    "type": "package",
+                    "package": {
+                        "name": "tobyink/foogallery-slick-gallery-template",
+                        "version": "1.0.0",
+                        "type": "wordpress-plugin",
+                        "source": {
+                            "url": "git@github.com:tobyink/php-wp-foogallery-slick-gallery-template.git",
+                            "type": "git",
+                            "reference": "master"
+                        }
+                    }
+                },
+                {
+                    "type": "package",
+                    "package": {
+                        "name": "tobyink/tobyink-contact",
+                        "version": "1.1",
+                        "type": "wordpress-plugin",
+                        "source": {
+                            "url": "git@github.com:tobyink/php-wp-tobyink-contact.git",
+                            "type": "git",
+                            "reference": "master"
+                        }
+                    }
+                },
+		{
+			"type": "package",
+			"package": {
+				"name": "maarten-twelvetwenty/advanced-custom-fields-pro",
+				"version": "6.0.6",
+				"type": "wordpress-plugin",
+				"source": {
+					"url": "git@github.com:maarten-twelvetwenty/advanced-custom-fields-pro.git",
+					"type": "git",
+					"reference": "main"
+				}
+			}
+		},
+                {
+                    "type": "package",
+                    "package": {
+                        "name": "tobyink/ctrl-semicolon",
+                        "version": "1.0",
+                        "type": "wordpress-plugin",
+                        "source": {
+                            "url": "git@github.com:tobyink/php-wp-ctrl-semicolon.git",
+                            "type": "git",
+                            "reference": "main"
+                        }
+                    }
+                }
+	],
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"johnpbloch/wordpress-core-installer": true
+		}
+	}
+}

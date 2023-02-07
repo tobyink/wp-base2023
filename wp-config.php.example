@@ -1,0 +1,39 @@
+<?php
+
+$table_prefix = 'wp_';
+$domain       = 'my.domain.example';
+
+define( 'DB_NAME',     'mysql-dbname' );
+define( 'DB_USER',     'mysql-username' );
+define( 'DB_PASSWORD', 'mysql-password' );
+define( 'DB_HOST',     'localhost' );
+define( 'DB_CHARSET',  'utf8' );
+define( 'DB_COLLATE',  '' );
+
+# https://api.wordpress.org/secret-key/1.1/salt/
+define('AUTH_KEY',         'sR+O=C@9E_Ma`Nf|0iAJ6_078wEW[5#p4wBs9FD3zzQ?c>`uO+#B%(*Dpw{WEH~5');
+define('SECURE_AUTH_KEY',  ')+E|.Q#6<=shHbN*HS5jDDjp Z>,:`lO3-#4iR>iw`F@RETl`F^4ae`i&1(EU0np');
+define('LOGGED_IN_KEY',    '<1v&7B?B3Lt}&TZ9hVr{.8vO~.N{^Zd7nFK[8~5jO^yFe8Mpi,Z|q`n<IYvyy@kD');
+define('NONCE_KEY',        'l27[jReM=vqW5{o7-]QwDtPZ%</F>|Q28|9Z(hr./1e5[2/8dHU]wFl~K)DP.aic');
+define('AUTH_SALT',        'zl:.cbe]++jddt%rb32M9A=SO9^N)vcf;x)+4ku-r]+ur+rY1[HQI3t|d@W54Ujj');
+define('SECURE_AUTH_SALT', '#|o:(jz/?*P!xer.v]%iZ]b)m:&Rs~f6[i*e-bh]CP2[=Th!FX-DBEH)0+`+ :KS');
+define('LOGGED_IN_SALT',   '@|S,&3{sa c}|>FZ<+;{4Hm{3]nMA|#ocXR7tHLu7N%y+}Ly+om,M|a|[Te-L9,d');
+define('NONCE_SALT',       'A;D,:BwSutWxj`mVdL0gVj>2[/;Qq4%j9hT}+hI`:bD]Z|`DuJhh-.{YmnKm!K`H');
+
+define( 'ALLOW_UNFILTERED_UPLOADS', true );
+define( 'WP_MEMORY_LIMIT', '256M' );
+define( 'WP_DEBUG', false );
+define( 'DISALLOW_FILE_EDIT', true );
+define( 'FS_METHOD', 'direct' );
+
+define( 'WP_SITEURL', "https://{$domain}/wordpress" );
+define( 'WP_HOME',"https://{$domain}" );
+define( 'WP_CONTENT_DIR',  __DIR__ . '/wp-content' );
+define( 'WP_CONTENT_URL', 'https://' . $domain . '/wp-content' );
+
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/wordpress/' );
+}
+
+require_once ABSPATH . 'wp-settings.php';
+
