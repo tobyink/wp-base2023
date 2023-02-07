@@ -40,6 +40,10 @@
   .nav a {
     @extent .nav-link;
   }
+
+  .navbar-toggler-icon {
+    background-image: none;
+  }
 }
 
 .fullwidth-banner .fullwidth {

@@ -5,10 +5,15 @@ import 'slick-carousel/slick/slick.min.js';
 import 'tilt.js/src/tilt.jquery.js';
 import 'bootstrap';
 
+import 'share-api-polyfill';
+
 /**
  * app.main
  */
 const main = async (err) => {
+
+    let $ = jQuery;
+
     if (err) {
         // handle hmr errors
         console.error(err);
@@ -18,7 +23,7 @@ const main = async (err) => {
     $('.slick-carousel').slick();
 
     /* popovers */
-    $('[data-bs-toggle="popover"]').popover();
+//    $('[data-bs-toggle="popover"]').popover();
 
     /* floating icons */
     $('#floating-icons').addClass('floating-icons-collapse').addClass('floating-icons-js').find('h2').click( function () {

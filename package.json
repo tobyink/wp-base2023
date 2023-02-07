@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "hover": "^3.0.0-alpha.6",
+    "share-api-polyfill": "^1.1.1",
     "slick-carousel": "^1.8.1",
     "tilt.js": "^1.2.1"
   }

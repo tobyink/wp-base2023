@@ -105,6 +105,25 @@ function parsley_render_col_html ( $fields, &$classes, &$heading_in_column, &$he
 	return sprintf( '<div class="col-type-html %s">%s</div>', $col_classes, do_shortcode($col_content) );
 }
 
+function parsley_render_col_sidebar ( $fields, &$classes, &$heading_in_column, &$heading_tag, &$heading_classes, &$heading ) {
+	$opts = $fields['options'];
+	$col_classes = $opts['classes'];
+	$sidebar_name = $fields['sidebar_name'];
+	if ( $heading_in_column ) {
+		$classes .= ' section-with-heading-in-column';
+		$col_classes .= ' column-containing-the-heading';
+		if ( $heading_tag != 'none' ) {
+			$heading_classes .= ' heading-in-column';
+			$col_content = sprintf( '<%s class="%s"><span>%s</span></%s>', $heading_tag, $heading_classes, $heading, $heading_tag ) . $col_content;
+			$heading_tag = 'none'; // prevent duplicate heading
+		}
+	}
+	ob_start();
+	dynamic_sidebar( $sidebar_name );
+	$col_content = ob_get_clean();
+	return sprintf( '<div class="col-type-sidebar %s">%s</div>', $col_classes, $col_content );
+}
+
 function parsley_render_col_lottie ( $fields, &$classes, &$heading_in_column, &$heading_tag, &$heading_classes, &$heading ) {
 
 	$opts = $fields['options'];

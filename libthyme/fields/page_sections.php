@@ -481,6 +481,18 @@ $SEC[] = parsley_acf_section_definition(
 		) );
 
 		$f->addLayout( parsley_acf_column_definition(
+			new FieldsBuilder( 'col_sidebar', [
+				'label'   => 'Sidebar',
+				'display' => 'block',
+			] ),
+			[ ],
+			function ( $builder ) {
+				$builder->addTab( 'Content' );
+				$builder->addText( 'sidebar_name', [ 'default_value' => 'sidebar-primary', 'required' => 1 ] );
+			},
+		) );
+
+		$f->addLayout( parsley_acf_column_definition(
 			new FieldsBuilder( 'col_image', [
 				'label'   => 'Image',
 				'display' => 'block',

@@ -3,7 +3,10 @@
   background: $wp-theme-floating-icons-bg;
   border: 1px solid darken($wp-theme-floating-icons-bg, 10%);
   color: $wp-theme-floating-icons-text;
-  a, a:link { color: $wp-theme-floating-icons-text }
+  a, a:link {
+    color: $wp-theme-floating-icons-text;
+    text-decoration: none;
+  }
 
   padding: 0.5 * $spacer;
 

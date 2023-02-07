@@ -1,47 +1,60 @@
-.business-card {
-  margin: $spacer auto $spacer !important;
-  padding: $spacer !important;
-  padding-bottom: 0 !important;
+body.page-id-1005 {
+  background: $quaternary;
+}
 
-  .col-md-3 { text-align: center }
-
-  img {
-    height: auto;
-    width: 100%;
-  }
+#business-card-wrapper {
+  max-width: 32rem;
+  margin: $spacer auto;
 
   @include media-breakpoint-up(lg) {
-    max-width: 54rem;
-    margin: ($spacer * 12) auto $spacer !important;
+    margin: ($spacer * 4) auto $spacer !important;
   }
 
-  @include media-breakpoint-down(sm) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  img {
+    width: 180px;
+    margin-bottom: 0px;
+  }
 
-    img {
-      max-width: 200px;
-      margin: auto auto ($spacer/2) !important;
-    }
-
-    h1 { text-align: center; }
+  #business-card {
+    margin-top: -90px;
+    padding-top: 115px;
 
     h2 {
-      text-align: center;
-      font-size: 100%;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin: $spacer 0;
     }
-    
-    p { margin: ($spacer/2) 0 !important; }
+
+    a { color: $body-color !important; }
+
+    .wrap-fa {
+      display:inline-block;
+      width:1.5em;
+      text-align:center;
+    }
+
+    abbr {
+      border: 0;
+      text-decoration: none;
+    }
+
+    p { font-size: 85% }
   }
+}
 
-  h1 { margin-bottom: ($spacer * 0.25) !important; }
-  h2 { margin-top: ($spacer * 0.25) !important; }
-  p { margin: $spacer 0 }
-  a { color: $body-color !important; }
+.mini-links {
+  @extend .text-white;
+  @extend .text-center;
 
-  .wrap-fa {
-    display:inline-block;
-    width:1.5em;
-    text-align:center;
+  font-size: 85%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+  a:link, a:visited {
+    @extend .text-white;
+  }
+  @include media-breakpoint-down(sm) {
+    a { display: block }
+    .dot { display: none }
   }
 }
