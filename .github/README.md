@@ -2,11 +2,13 @@
 
 Setup a simple Wordpress 6.x site powered by the Sage+Bootstrap-based [Thyme](https://github.com/tobyink/wp-thyme-theme) theme.
 
+If you need to customize this base, fork this repo (and maybe Thyme's repo too) and use the URLs to your forked versions instead of the originals.
+
 ## Assumptions
 
 * You have SSH access to a Linux+Apache web host
 * You have a blank MySQL/MariaDB database
-* PHP and PHP Composer are installed and working on the web host
+* PHP and PHP Composer are installed and working on the web host, along with any optional components Wordpress and Roots Sage need
 * You have a domain name (or subdomain) pointed at the host
 * Node JS, npm, and yarn are installed and working on the web host
 * git is installed and working on the web host
