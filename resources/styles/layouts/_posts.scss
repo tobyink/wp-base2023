@@ -1,0 +1,33 @@
+.blog, .archive {
+  article {
+    margin-bottom: $spacer * 1.5;
+    header h2 {
+      a:link, a:visited { text-decoration: none; color: $dark }
+      a:hover { text-decoration: underline; color: darken($primary, 10%) }
+    }
+  }
+}
+
+.article-meta {
+  font-size: 85%;
+  margin: $spacer 0;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    margin: calc($spacer / 2) 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 $spacer 0 0;
+  }
+
+  .updated {
+    @extend .badge;
+    @extend .text-bg-secondary;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

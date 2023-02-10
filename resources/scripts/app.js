@@ -78,6 +78,24 @@ const main = async (err) => {
         e.preventDefault();
         jQuery( 'body,html' ).animate( { 'scrollTop' : 0 }, 500 );
     } );
+
+    function getOpenGraphData ( property, fallback ) {
+        let e = document.querySelector(`meta[property="${property}"]`);
+        if ( e ) {
+            return e.getAttribute('content');
+        }
+        return fallback;
+    }
+
+    $( '.share-link a' ).click( function( e ) {
+        e.preventDefault();
+        navigator.share( {
+            url:   getOpenGraphData( 'og:url',         window.location.href ),
+            title: getOpenGraphData( 'og:title',       document.title ),
+            text:  getOpenGraphData( 'og:description', document.title ),
+        } );
+    } );
+
 };
 
 /**
