@@ -18,14 +18,14 @@
         if ( $style == 'image' ) {
           $img = \App\theme_get_option( 'header_image' );
           printf(
-            '<a class="navbar-brand" href="%s">%s</a>',
+            '<a class="navbar-brand" href="%s" rel="top">%s</a>',
             esc_html( home_url( '/' ) ),
             wp_get_attachment_image( $img, 'full', false, [ 'alt' => $title ] )
           );
         }
         elseif ( $style == 'text' ) {
           printf(
-            '<a class="navbar-brand" href="%s">%s</a>',
+            '<a class="navbar-brand" href="%s" rel="top">%s</a>',
             esc_html( home_url( '/' ) ),
             esc_html( $title )
           );
@@ -33,7 +33,7 @@
         elseif ( $style == 'both' ) {
           $img = \App\theme_get_option( 'header_image' );
           printf(
-            '<a class="navbar-brand" href="%s">%s <span>%s</span></a>',
+            '<a class="navbar-brand" href="%s" rel="top">%s <span>%s</span></a>',
             esc_html( home_url( '/' ) ),
             wp_get_attachment_image( $img, 'full', false, [ 'alt' => '' ] ),
             esc_html( $title )
