@@ -1,7 +1,7 @@
 <div class="article-meta">
 
 <p>
-  <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
+  <time class="updated" title="{{ get_post_time('r', true) }}" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
 </p>
 
 @php
