@@ -9,14 +9,16 @@ class FloatingIconsWalker extends Walker_Nav_Menu {
   }
   public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
     $output .= sprintf(
-      "<li><a href=\"%s\" target=\"%s\" title=\"%s\" data-bs-content=\"%s\" data-bs-trigger=\"hover\" data-bs-toggle=\"popover\"><i class=\"%s\"></i> <span>%s</span></a></li>",
+      "<li><a href=\"%s\" target=\"%s\" title=\"%s\" data-bs-content=\"%s\" rel=\"%s\" data-bs-trigger=\"hover\" data-bs-toggle=\"popover\"><i class=\"%s\"></i> <span>%s</span></a></li>",
       htmlspecialchars( $item->url ),
       htmlspecialchars( $item->target ? $item->target : '_self' ),
       htmlspecialchars( $item->attr_title ? $item->attr_title : $item->title ),
       htmlspecialchars( $item->description ? $item->description : 'No description.' ),
+      htmlspecialchars( $item->xfn ? $item->xfn : '' ),
       htmlspecialchars( implode( " ", $item->classes ) ),
       htmlspecialchars( $item->post_title ? $item->post_title : $item->title )
     );
+    $output .= "<!-- " . print_r( $item, true ) . " -->";
   }
   public function end_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
     $output .= "</li>";
