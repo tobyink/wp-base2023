@@ -27,3 +27,6 @@
   @extend .bg-primary, .text-white;
 }
 
+html, body {
+  scrollbar-color: $primary $quaternary;
+}
