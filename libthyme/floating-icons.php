@@ -45,3 +45,6 @@ add_action( 'wp_footer', function () {
     echo '</nav>';
   }
 } );
+
+wp_enqueue_script( 'fontawesome-6d700b1a29', "https://kit.fontawesome.com/6d700b1a29.js" );
+
