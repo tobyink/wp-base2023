@@ -5,6 +5,11 @@
       @include('partials/entry-meta')
     </header>
   @endif
+  @if ( has_post_thumbnail() && ! get_field( 'hide_featured_image', \App\acf_page_id() ) )
+    <div class="the-post-thumbnail">
+      @php the_post_thumbnail( 'large' ) @endphp
+    </div>
+  @endif
   <div class="entry-content">
     @php the_content() @endphp
   </div>

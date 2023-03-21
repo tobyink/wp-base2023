@@ -15,7 +15,7 @@ $page
         'label' => 'Hide Header',
         'ui' => 1,
         'ui_on_text' => 'Hidden',
-        'ui_off_text' => 'Normal',
+        'ui_off_text' => 'Shown',
     ]);
 
 $page
@@ -29,7 +29,7 @@ $page
         'label' => 'Hide Breadcrumbs',
         'ui' => 1,
         'ui_on_text' => 'Hidden',
-        'ui_off_text' => 'Normal',
+        'ui_off_text' => 'Shown',
     ]);
 
 $page
@@ -37,7 +37,15 @@ $page
         'label' => 'Hide Title',
         'ui' => 1,
         'ui_on_text' => 'Hidden',
-        'ui_off_text' => 'Normal',
+        'ui_off_text' => 'Shown',
+    ]);
+
+$page
+    ->addTrueFalse('hide_featured_image', [
+        'label' => 'Hide Featured Image',
+        'ui' => 1,
+        'ui_on_text' => 'Hidden',
+        'ui_off_text' => 'Shown',
     ]);
 
 $page
@@ -45,7 +53,7 @@ $page
         'label' => 'Hide Sidebar',
         'ui' => 1,
         'ui_on_text' => 'Hidden',
-        'ui_off_text' => 'Normal',
+        'ui_off_text' => 'Shown',
     ]);
 
 $page
@@ -61,7 +69,7 @@ $page
         'label' => 'Hide Footer',
         'ui' => 1,
         'ui_on_text' => 'Hidden',
-        'ui_off_text' => 'Normal',
+        'ui_off_text' => 'Shown',
     ]);
 
 acf_add_local_field_group( $page->build() );
